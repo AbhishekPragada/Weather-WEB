@@ -35,4 +35,4 @@ Once when we run the app.js file `node app.js` and go to
 
 we get the following output :zap: :zap:
 
-![weather](weather.gif)
+![weather](wt.gif)
