@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+  <head>
+    <title>Weather</title>
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+
+  <body>
+  <nav class="navbar">
+  <div class="container-fluid">
+    <span class="navbar-brand mb-0 h1">Weather Report    <i class="fas fa-cloud"></i></span>
+  </div>
+</nav>
+  <form action="/" method="post">
+    <div class="container h-100">
+      <div class="d-flex justify-content-center h-100">
+        <div class="searchbar">
+          <input class="search_input" type="text" name="cityName" placeholder="Search..." id="cityInput" autocomplete="off">
+          <button type="submit" class="search_icon"><i class="fas fa-search"></i></button>
+        </div>
+      </div>
+    </div>
+  </form>
+
+  <article class="widget">
+    <div class="weathericon"><img src = <%= iconurl %>></div>
+    <div class="weatherInfo">
+      <div class="temperature"><p><%= temp %><span>&#176</span>C</p></div>
+      <div class="description">    
+        <div class="weatherCondition"><p> <%= des %></p></div>    
+        <div class="place"><p><%= query%></p></div>
+      </div>
+    </div>
+    <div class="date"><%= date %></div>
+  </article>
+  </body>
+
+</html>
