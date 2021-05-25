@@ -3,13 +3,24 @@ This is a local website which displays the weather details of a given place :clo
 
 This project includes the concepts of NODE :leaves: so it can be easily deployed using **HEROKU** :rocket:
 
-As of now it is deployed in locally
+It can be deployed both locally and on heroku by setting the port to
+
+`const PORT = process.env.PORT || 3000`
+
+Link to the website deployed on heroku
+**https://weatherreportjs.herokuapp.com/**
 
 ## Initiation
 
-The installation of express and body-parser are needed *(NOTE: You can also use **EJS** for more beautiful output)*
+The installation of express and body-parser are needed
 
-`npm i express body-parser`
+`npm i express body-parser ejs`
+
+In the app.js file do not forget to add the code as shown
+
+`app.set('view engine', 'ejs');`
+
+`app.use(bodyParser.urlencoded({extended: true}));`
 
 ## API
 
@@ -21,15 +32,15 @@ where XXX can be replace by the api you use and the query is the cityname which 
 
 ## Output
 
-The website can be created by rendering html and css files. :computer:
+The website can be created by rendering ejs and css files. :computer:
 
 *NOTE : CSS file cannot be rendered directly we need to use the following command in the app.js file*
 
-`app.use(express.static("style"));`
+`app.use(express.static("public"));`
 
-style is the folder where css is located
+public is the folder where css is located
 
-Once when we run the app.js file `node app.js` and go to 
+Once when we run the app.js file `node app.js` go to 
 
 > localhost:3000 
 
