@@ -32,7 +32,7 @@ where XXX can be replace by the api you use and the query is the cityname which 
 
 ## Output
 
-The website can be created by rendering html and css files. :computer:
+The website can be created by rendering ejs and css files. :computer:
 
 *NOTE : CSS file cannot be rendered directly we need to use the following command in the app.js file*
 
